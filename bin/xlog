@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+
+use App::XLog::Command;
+
+exit App::XLog::Command->new($0, @ARGV)->run();
