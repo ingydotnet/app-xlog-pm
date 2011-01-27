@@ -1,9 +1,17 @@
 package App::XLog;
 use 5.008003;
 use Mouse;
-extends 'Cog::Plugin';
+extends 'Cog::App';
 
 our $VERSION = '0.01';
+
+use constant app_root => 'xlog';
+use constant command_script => 'xlog';
+use constant config_class => 'App::XLog::Config';
+
+package App::XLog::Config;
+use Mouse;
+extends 'Cog::Config';
 
 1;
 

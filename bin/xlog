@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
-use App::XLog::Command;
+use App::XLog;
 
-exit App::XLog::Command->new($0, @ARGV)->run();
+my $app = App::XLog->new();
+$app->config->command_script($0);
+$app->config->command_args([@ARGV]);
+exit $app->run();
