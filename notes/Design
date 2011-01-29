@@ -1,0 +1,37 @@
+= Design
+
+- XLog is a way to "Web Log" anything: thoughts, ideas, stories, photos,
+  document.
+- XLog is built over CogBase and git.
+- XLog is run using CogApp.
+- An XLog repository contains 4 branches.
+  - master (aka export)
+  - cogbase
+  - cogapp
+  - gh-pages (for static site run from github)
+- XLog is edited/configured/updated/maintained from the command line
+- Each thought/etc is a cog node
+- Each type of node has a schema node
+- Each node has a 4 digit, human friendly id.
+- The XLog itself has a similar id.
+
+
+= xlogger.org
+- A site for hosting of xlogs. 
+- xloggers can comment on other xloggers content.
+
+= Test/Implementation Stories:
+
+--- User enters an empty directory
+  > xlog init
+    - mkdir xlog/
+    - mkdir Schema/
+    - mkdir thought/
+    - mkdir story/
+    - mkdir photo/
+    - mkdir comment/
+    - create xlog/config.yaml
+    - create thought
+    - write Schema/thought.cog (etc, for all basic types)
+    - git init
+    - git add .
