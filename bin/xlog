@@ -2,7 +2,4 @@
 
 use App::XLog;
 
-my $app = App::XLog->new();
-$app->config->command_script($0);
-$app->config->command_args([@ARGV]);
-exit $app->run();
+exit App::XLog->new()->run();
